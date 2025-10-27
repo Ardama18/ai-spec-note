@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "AI-driven specification-based development framework with automated design documentation and task execution workflows",
   "author": {
-      "name": "Naoki Kodama"
+      "name": "Naoki Kodama",
+      "email": "kodama.naoki@robotpayment.co.jp",
+      "url": "https://github.com/naoki-kodama"
   },
+  "homepage": "https://docs.example.com/plugin",
+  "repository": "https://github.com/Ardama18/ai-spec-driven",
   "keywords": [
     "typescript",
     "template",
