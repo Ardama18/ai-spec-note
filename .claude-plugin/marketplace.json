@@ -1,5 +1,8 @@
 {
   "name": "ai-spec-driven-framework",
+  "owner": {
+  "name": "Naoki Kodama"
+  },  
   "plugins": [
     {
       "name": "ai-spec-driven-framework",
