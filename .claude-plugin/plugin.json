@@ -1,0 +1,37 @@
+{
+  "name": "ai-spec-driven-framework",
+  "version": "0.0.1",
+  "description": "AI-driven specification-based development framework with automated design documentation and task execution workflows",
+  "author": {
+      "name": "Naoki Kodama"
+  },
+  "keywords": [
+    "typescript",
+    "template",
+    "spec-driven",
+    "claude-code",
+    "llm-development",
+    "ai-development",
+    "development-rules",
+    "quality-assurance"
+  ],
+  "commands": [
+    "./commands/implement.md"
+  ],
+  "agents": [
+    "./agents/acceptance-test-generator.md",
+    "./agents/code-reviewer.md",
+    "./agents/document-reviewer.md",
+    "./agents/figma-design-importer.md",    
+    "./agents/prd-creator.md",
+    "./agents/quality-fixer.md",
+    "./agents/requirement-analyzer.md",
+    "./agents/rule-advisor.md",
+    "./agents/task-decomposer.md",
+    "./agents/task-executor.md",
+    "./agents/technical-designer.md",
+    "./agents/ui-fixer.md",
+    "./agents/visual-checker.md",
+    "./agents/work-planner.md"
+  ]
+}

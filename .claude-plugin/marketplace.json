@@ -1,0 +1,24 @@
+{
+  "name": "ai-spec-driven-framework",
+  "plugins": [
+    {
+      "name": "ai-spec-driven-framework",
+      "source": "./",
+      "description": "AI-driven specification-based development framework with automated design documentation and task execution workflows",
+      "version": "0.0.1",
+      "author": {
+        "name": "Naoki Kodama"
+      },
+      "keywords": [
+        "typescript",
+        "template",
+        "spec-driven",
+        "claude-code",
+        "llm-development",
+        "ai-development",
+        "development-rules",
+        "quality-assurance"
+      ]
+    }
+  ]
+}
