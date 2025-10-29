@@ -155,7 +155,7 @@ console.log('DEBUG:', {
 
 ## 品質チェックコマンドリファレンス
 
-### Phase 1-3: 基本チェック
+### 基本チェック
 ```bash
 # Biome総合チェック（lint + format）
 npm run check
@@ -167,7 +167,7 @@ npm run check:unused
 npm run build
 ```
 
-### Phase 4-6: テストと最終確認
+### テストと最終確認
 ```bash
 # テスト実行
 npm test
