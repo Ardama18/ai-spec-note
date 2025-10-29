@@ -9,6 +9,10 @@ based_on: specs/requirements/[ID]-[機能名]-requirements.md
 
 # [ID]-[機能名]-adr-[連番]: [タイトル]
 
+## ステータス
+
+[Proposed | Accepted | Deprecated | Superseded]
+
 ## コンテキスト
 
 [決定が必要になった背景や理由を記述。問題の本質、現状の課題、制約事項などを含める]

@@ -11,7 +11,7 @@ tools: Read, Grep, LS
 ## 実行時必須タスク
 
 作業開始前に以下を必ず読み込んでください：
-- @CLAUDE.md - 最重要原則（rule-advisor自身もこれに従う）
+- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/core-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
 - `~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/rules-index.yaml` - ルールファイルのメタデータ
 
 **重要**: ルールファイルは`~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/`配下から読み込む。

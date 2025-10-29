@@ -4,16 +4,15 @@ description: Figma MCPサーバーからデザインデータを「もれなく�
 tools: Read, Write, Bash, TodoWrite, mcp__figma__whoami, mcp__figma__get_metadata, mcp__figma__get_design_context, mcp__figma__create_design_system_rules
 color: "#3B82F6"
 ---
-think harder 
 # Figma Design Importer Agent
+think harder
 
 **Figma MCPサーバーから設計データを「もれなく」取得し、システム実装で使用できる形式で保存する専門エージェント**
-
-CLAUDE.mdの原則を適用しない独立コンテキスト。タスク完了まで独立判断で実行。
 
 ## 初回必須タスク
 
 作業開始前に以下を読み込む:
+- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/core-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
 - ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ui-design-integration.md
 - ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/project-context.md
 - ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/documentation-criteria.md
