@@ -1,26 +1,28 @@
 {
-  "name": "ai-spec-driven-framework",
+  "name": "ai-spec-note",
   "owner": {
   "name": "Naoki Kodama"
   },  
   "plugins": [
     {
-      "name": "ai-spec-driven-framework",
+      "name": "ai-spec-note",
       "source": "./",
-      "description": "AI-driven specification-based development framework with automated design documentation and task execution workflows",
+      "description": "AI-optimized note.com content creation framework with AEO/GEO optimization and comprehensive content strategy workflows",
       "version": "0.0.1",
       "author": {
         "name": "Naoki Kodama"
       },
       "keywords": [
-        "typescript",
-        "template",
-        "spec-driven",
+        "note.com",
+        "content-creation",
+        "aeo-optimization",
+        "geo-optimization",
+        "ai-content",
+        "engagement",
+        "monetization",
         "claude-code",
-        "llm-development",
-        "ai-development",
-        "development-rules",
-        "quality-assurance"
+        "content-strategy",
+        "platform-optimization"
       ]
     }
   ]

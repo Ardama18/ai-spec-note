@@ -1,41 +1,45 @@
 {
-  "name": "ai-spec-driven-framework",
+  "name": "ai-spec-note",
   "version": "0.0.1",
-  "description": "AI-driven specification-based development framework with automated design documentation and task execution workflows",
+  "description": "AI-optimized note.com content creation framework with AEO/GEO optimization and comprehensive content strategy workflows",
   "author": {
       "name": "Naoki Kodama",
-      "email": "kodama.naoki@robotpayment.co.jp",
+      "email": "dama.besuhi@gmail.com",
       "url": "https://github.com/naoki-kodama"
   },
   "homepage": "https://docs.example.com/plugin",
-  "repository": "https://github.com/Ardama18/ai-spec-driven",
+  "repository": "https://github.com/naoki-kodama/ai-spec-note",
   "keywords": [
-    "typescript",
-    "template",
-    "spec-driven",
+    "note.com",
+    "content-creation",
+    "aeo-optimization",
+    "geo-optimization",
+    "ai-content",
+    "engagement",
+    "monetization",
     "claude-code",
-    "llm-development",
-    "ai-development",
-    "development-rules",
-    "quality-assurance"
+    "content-strategy",
+    "platform-optimization"
   ],
   "commands": [
-    "./commands/implement.md"
+    "./commands/create-content.md",
+    "./commands/publish-content.md",
+    "./commands/analyze-content.md"
   ],
   "agents": [
-    "./agents/acceptance-test-generator.md",
-    "./agents/code-reviewer.md",
-    "./agents/document-reviewer.md",
-    "./agents/figma-design-importer.md",    
-    "./agents/prd-creator.md",
-    "./agents/quality-fixer.md",
-    "./agents/requirement-analyzer.md",
-    "./agents/rule-advisor.md",
-    "./agents/task-decomposer.md",
-    "./agents/task-executor.md",
-    "./agents/technical-designer.md",
-    "./agents/ui-fixer.md",
-    "./agents/visual-checker.md",
-    "./agents/work-planner.md"
+    "./agents/content-analyzer.md",
+    "./agents/content-planner.md",
+    "./agents/content-schedule-planner.md",
+    "./agents/content-executor.md",
+    "./agents/content-reviewer.md",
+    "./agents/aeo-optimizer.md",
+    "./agents/geo-optimizer.md",
+    "./agents/note-publisher.md",
+    "./agents/engagement-analyzer.md",
+    "./agents/monetization-planner.md",
+    "./agents/trend-researcher.md",
+    "./agents/analytics-checker.md",
+    "./agents/series-coordinator.md",
+    "./agents/writing-advisor.md"
   ]
 }
