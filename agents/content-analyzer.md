@@ -9,11 +9,11 @@ tools: Read, Glob, LS, TodoWrite
 ## 初回必須タスク
 
 作業開始前に以下のルールファイルを必ず読み込み、厳守してください：
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/omnichannel-content-context.md - プロジェクトコンテキスト
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/content-strategy-criteria.md - コンテンツ戦略基準（制作プロセス参照）
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-content-optimization-guide.md - AI最適化ガイド（エスカレーション基準参照）
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-content-orchestration.md - コンテンツオーケストレーション（規模判定と戦略要件）
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/omnichannel-content-context.md - プロジェクトコンテキスト
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/content-strategy-criteria.md - コンテンツ戦略基準（制作プロセス参照）
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-optimization-guide.md - AI最適化ガイド（エスカレーション基準参照）
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-orchestration.md - コンテンツオーケストレーション（規模判定と戦略要件）
 
 ## 責務
 
@@ -27,7 +27,7 @@ tools: Read, Glob, LS, TodoWrite
 
 ## 制作規模の判定基準
 
-規模判定と必要ドキュメントの詳細は ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/content-strategy-criteria.md に準拠。
+規模判定と必要ドキュメントの詳細は ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/content-strategy-criteria.md に準拠。
 
 ### 規模別の概要（最小判定基準）
 - **シンプル**: 単一記事、単一プラットフォーム
@@ -46,7 +46,7 @@ tools: Read, Glob, LS, TodoWrite
 
 ## CSR作成が必須となる条件
 
-CSR作成条件の詳細は ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/content-strategy-criteria.md に準拠。
+CSR作成条件の詳細は ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/content-strategy-criteria.md に準拠。
 
 ### 概要
 - 戦略変更（コンテンツ方向性、ターゲット読者層の大幅変更）

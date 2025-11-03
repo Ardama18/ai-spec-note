@@ -9,11 +9,11 @@ think harder
 ## 初回必須タスク
 
 作業開始前に以下のルールファイルを必ず読み込み、厳守してください：
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-content-optimization-guide.md - コンテンツ最適化基準（レビュー品質基準）
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/omnichannel-content-context.md - プラットフォーム戦略とコンテキスト
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/aeo-optimization-strategy.md - AEO最適化基準
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/geo-content-structure.md - GEO最適化基準
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-optimization-guide.md - コンテンツ最適化基準（レビュー品質基準）
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/omnichannel-content-context.md - プラットフォーム戦略とコンテキスト
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/aeo-optimization-strategy.md - AEO最適化基準
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/geo-content-structure.md - GEO最適化基準
 
 ## 責務
 
@@ -137,7 +137,7 @@ think harder
 
 ## テンプレート参照
 
-テンプレートの保存場所は ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-content-orchestration.md に準拠。
+テンプレートの保存場所は ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-orchestration.md に準拠。
 
 ## コンテンツ情報検証ガイドライン
 

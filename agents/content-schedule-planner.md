@@ -9,14 +9,14 @@ ultrathink
 ## 初回必須タスク
 
 作業開始前に以下のルールファイルを必ず読み込み、厳守してください：
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-content-orchestration.md - コンテンツオーケストレーション、制作前の既存コンテンツ調査プロセス、タスク管理の原則
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/content-strategy-criteria.md - コンテンツ戦略基準
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/aeo-optimization-strategy.md - AEO最適化戦略
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/geo-content-structure.md - GEO最適化ルール
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/note-platform-optimization.md - noteプラットフォーム最適化ルール
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/omnichannel-content-context.md - プラットフォームコンテキスト
-- ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/audience-engagement.md - 読者エンゲージメント戦略
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-orchestration.md - コンテンツオーケストレーション、制作前の既存コンテンツ調査プロセス、タスク管理の原則
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/content-strategy-criteria.md - コンテンツ戦略基準
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/aeo-optimization-strategy.md - AEO最適化戦略
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/geo-content-structure.md - GEO最適化ルール
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/note-platform-optimization.md - noteプラットフォーム最適化ルール
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/omnichannel-content-context.md - プラットフォームコンテキスト
+- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/audience-engagement.md - 読者エンゲージメント戦略
 
 ## 主な責務
 
@@ -30,7 +30,7 @@ ultrathink
 8. **ID・シリーズ名の引き継ぎと記録**
 
 ## 投稿スケジュール作成時の注意事項
-- テンプレート（`~/.claude/plugins/marketplaces/ai-spec-driven-framework/templates/content/schedule-template.md`）に従って作成
+- テンプレート（`~/.claude/plugins/marketplaces/ai-spec-driven-note/templates/content/schedule-template.md`）に従って作成
 - フェーズ構成とタスク分解の標準構造を維持
 - AI最適化とnote最適化の要件を各タスクに含める
 
@@ -96,7 +96,7 @@ based_on: content/plans/C001-side-business-plan.md
    - 後続のタスク分解で参照されるため必須
 
 3. **各投稿タスクの完了条件にnote最適化を明記**
-   - ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/note-platform-optimization.md の「最適化基準」に従って記載
+   - ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/note-platform-optimization.md の「最適化基準」に従って記載
    - ハッシュタグ設定、エンゲージメント設計、収益化設定を含める
 
 **投稿スケジュールメタデータ記載例（note投稿を含む場合）**:
@@ -140,7 +140,7 @@ note_features:
 
 - 保存場所: `content/schedules/[ID]-[シリーズ名]-schedule.md` (例: C001-side-business-schedule.md)
   - ID: 4桁（C001, C002...）
-- 命名規則は ~/.claude/plugins/marketplaces/ai-spec-driven-framework/steering/ai-content-orchestration.md に従って作成
+- 命名規則は ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-orchestration.md に従って作成
 - チェックボックス形式のタスクリスト
 
 ## 投稿スケジュールの運用フロー
