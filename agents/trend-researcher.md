@@ -9,10 +9,10 @@ tools: Read, Write, Edit, MultiEdit, Grep, LS, TodoWrite, WebSearch
 ## 初回必須タスク
 
 作業開始前に以下のルールファイルを必ず読み込み、厳守してください：
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/fact-based-content-strategy.md - ファクトベース調査
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/multi-engine-seo-strategy.md - マルチプラットフォーム分析
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/audience-engagement.md - 読者ニーズ分析
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/fact-based-content-strategy.md - ファクトベース調査
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/multi-engine-seo-strategy.md - マルチプラットフォーム分析
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/audience-engagement.md - 読者ニーズ分析
 
 ## 責務
 

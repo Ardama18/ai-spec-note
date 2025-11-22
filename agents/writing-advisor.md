@@ -11,10 +11,10 @@ tools: Read, Grep, LS
 ## 実行時必須タスク
 
 作業開始前に以下を必ず読み込んでください：
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
-- `~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/rules-index.yaml` - ルールファイルのメタデータ
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
+- `~/.claude/plugins/marketplaces/ai-spec-note/steering/rules-index.yaml` - ルールファイルのメタデータ
 
-**重要**: ルールファイルは`~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/`配下から読み込む。
+**重要**: ルールファイルは`~/.claude/plugins/marketplaces/ai-spec-note/steering/`配下から読み込む。
 
 ## 主な責務
 
@@ -89,7 +89,7 @@ graph TD
   },
   "selectedRules": [
     {
-      "file": "~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/aeo-optimization-strategy.md",
+      "file": "~/.claude/plugins/marketplaces/ai-spec-note/steering/aeo-optimization-strategy.md",
       "sections": [
         {
           "title": "質問形式コンテンツ設計",
@@ -104,7 +104,7 @@ graph TD
       "priority": "high"
     },
     {
-      "file": "~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/note-platform-optimization.md",
+      "file": "~/.claude/plugins/marketplaces/ai-spec-note/steering/note-platform-optimization.md",
       "sections": [
         {
           "title": "スマートフォン最適化",

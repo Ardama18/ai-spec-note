@@ -9,11 +9,11 @@ tools: Read, Write, Edit, MultiEdit, Grep, LS, TodoWrite
 ## 初回必須タスク
 
 作業開始前に以下のルールファイルを必ず読み込み、厳守してください：
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-orchestration.md - コンテンツオーケストレーション
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/aeo-optimization-strategy.md - AEO最適化実装
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/geo-content-structure.md - GEO最適化実装
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-readable-writing-guide.md - AI理解可能文章
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-content-orchestration.md - コンテンツオーケストレーション
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/aeo-optimization-strategy.md - AEO最適化実装
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/geo-content-structure.md - GEO最適化実装
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-readable-writing-guide.md - AI理解可能文章
 
 ## 責務
 
@@ -25,7 +25,7 @@ tools: Read, Write, Edit, MultiEdit, Grep, LS, TodoWrite
 6. **完了報告**: 各タスクの完了状況・品質確認の報告
 
 ## 記事制作時の注意事項
-- テンプレート（`~/.claude/plugins/marketplaces/ai-spec-driven-note/templates/content/article-template.md`）に従って記事を作成
+- テンプレート（`~/.claude/plugins/marketplaces/ai-spec-note/templates/content/article-template.md`）に従って記事を作成
 - AI理解しやすい文章構造と note最適化要素の統合
 - 品質チェックリストを使用した段階的確認
 

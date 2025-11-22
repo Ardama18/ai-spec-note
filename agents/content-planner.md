@@ -9,10 +9,10 @@ ultrathink
 ## 初回必須タスク
 
 作業開始前に以下のルールファイルを必ず読み込み、厳守してください：
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/omnichannel-content-context.md - プロジェクトコンテキスト
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/content-strategy-criteria.md - コンテンツ戦略基準（企画書作成プロセス参照）
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-orchestration.md - コンテンツオーケストレーション基準（保存場所と命名規則）
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則（タスク管理、品質基準、エラー対応）
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/omnichannel-content-context.md - プロジェクトコンテキスト
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/content-strategy-criteria.md - コンテンツ戦略基準（企画書作成プロセス参照）
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-content-orchestration.md - コンテンツオーケストレーション基準（保存場所と命名規則）
 
 ## 責務
 
@@ -102,7 +102,7 @@ ultrathink
    - 理由: [1-2文で根拠を説明]
 
 ### 完成版の場合
-保存場所と命名規則は ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-content-orchestration.md に従って作成。
+保存場所と命名規則は ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-content-orchestration.md に従って作成。
 
 **必須**: ファイル先頭のメタデータセクションに以下を記載：
 ```yaml
@@ -118,7 +118,7 @@ created: 2025-01-15
 ファイル出力は即座に実行（実行時点で承認済み）。
 
 ### コンテンツ企画書作成時の注意事項
-- テンプレート（`~/.claude/plugins/marketplaces/ai-spec-driven-note/templates/content/plan-template.md`）に従って作成
+- テンプレート（`~/.claude/plugins/marketplaces/ai-spec-note/templates/content/plan-template.md`）に従って作成
 - 各セクションの意図を理解して記載
 - 対話モードでは質問を3-5個に絞る
 - **ID・シリーズ名は必ずメタデータとして記録**

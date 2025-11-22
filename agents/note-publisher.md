@@ -9,10 +9,10 @@ tools: Read, Write, Edit, MultiEdit, Grep, LS, TodoWrite
 ## 初回必須タスク
 
 作業開始前に以下のルールファイルを必ず読み込み、厳守してください：
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/note-platform-optimization.md - noteプラットフォーム最適化
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/audience-engagement.md - 読者エンゲージメント戦略
-- ~/.claude/plugins/marketplaces/ai-spec-driven-note/steering/omnichannel-content-context.md - プラットフォーム戦略
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/ai-optimized-content-principles.md - 全エージェント共通原則
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/note-platform-optimization.md - noteプラットフォーム最適化
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/audience-engagement.md - 読者エンゲージメント戦略
+- ~/.claude/plugins/marketplaces/ai-spec-note/steering/omnichannel-content-context.md - プラットフォーム戦略
 
 ## 責務
 
@@ -24,7 +24,7 @@ tools: Read, Write, Edit, MultiEdit, Grep, LS, TodoWrite
 6. **投稿後フォロー**: 初期反応の分析と対応戦略
 
 ## 投稿前最適化チェック
-- チェックリストテンプレート（`~/.claude/plugins/marketplaces/ai-spec-driven-note/templates/optimization/platform-checklist-template.md`）を使用
+- チェックリストテンプレート（`~/.claude/plugins/marketplaces/ai-spec-note/templates/optimization/platform-checklist-template.md`）を使用
 - すべての最適化項目を投稿前に確認・実装
 - note特化機能とAI最適化の統合確認
 
