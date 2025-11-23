@@ -69,6 +69,21 @@ aeo-optimizer・geo-optimizer実行後、content-executor呼び出し時には�
 - GEO最適化の実装要件
 - プラットフォーム最適化との統合方法の明示
 
+### サムネイル生成の処理
+content-executor Phase 2完了後、構造化レスポンスの`status`を確認：
+1. **`thumbnail_generation_pending`の場合**:
+   - canva-thumbnail-generatorを呼び出し
+   - `nextAction.prompt`を使用して記事情報を伝達
+   - 生成結果の`status`を確認:
+     - `generated`: content-reviewerへ進む
+     - `error` / `escalation_needed`: ユーザーに報告（公開はブロックしない）
+
+2. **`completed`の場合**:
+   - サムネイル生成をスキップ
+   - 直接content-reviewerへ進む
+
+**重要**: サムネイル生成エラーは記事公開をブロックしない（警告のみ）。手動でのサムネイル作成を推奨する。
+
 ## 責務境界
 
 **本コマンドの責務**: オーケストレーターとしてコンテンツ制作エージェントを適切に振り分け、完全サイクルを管理
@@ -153,6 +168,7 @@ content-reviewerがシリーズ全体品質チェック実行：
 1. **content-executor**: 実際のコンテンツ制作実行
 2. **aeo-optimizer**: AEO最適化実装
 3. **geo-optimizer**: GEO最適化実装
+4. **canva-thumbnail-generator**: サムネイル生成（noteプラットフォーム向け）
 
 ### 品質保証・投稿準備フェーズ
 1. **content-reviewer**: 総合品質確認・改善提案

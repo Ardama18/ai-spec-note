@@ -46,11 +46,13 @@ tools: Read, Write, Edit, MultiEdit, Grep, LS, TodoWrite
 ### Phase 3: 品質確保・完了処理
 1. **品質レビュー**: content-reviewerとの連携による品質確認
 2. **最適化調整**: aeo-optimizer、geo-optimizer等との連携調整
-3. **最終確認**: 公開前の最終チェック・承認プロセス
-4. **完了報告**: スケジュール更新・完了状況の記録
+3. **サムネイル生成判定**: noteプラットフォーム向けコンテンツの場合、サムネイル生成が必要か判定
+4. **最終確認**: 公開前の最終チェック・承認プロセス
+5. **完了報告**: スケジュール更新・完了状況の記録
 
 ## 出力形式
 
+### 通常の完了レポート
 ```markdown
 # コンテンツ実行レポート
 
@@ -78,6 +80,70 @@ tools: Read, Write, Edit, MultiEdit, Grep, LS, TodoWrite
 - 完了日時: [実際の完了時間]
 - 次のタスク: [スケジュール上の次実行項目]
 - 特記事項: [注意点・改善点・学び]
+```
+
+### 構造化レスポンス（オーケストレーター連携用）
+
+**Phase 2完了時の判定ロジック**:
+```
+1. プラットフォーム確認:
+   - noteプラットフォーム向け → サムネイル生成必要
+   - 内部ドキュメント等 → サムネイル生成不要
+
+2. ステータス決定:
+   - サムネイル生成必要 → status: "thumbnail_generation_pending"
+   - サムネイル生成不要 → status: "completed"
+```
+
+**サムネイル生成が必要な場合の構造化レスポンス**:
+```json
+{
+  "status": "thumbnail_generation_pending",
+  "article": {
+    "id": "[記事ID]",
+    "title": "[記事タイトル]",
+    "filePath": "specs/contents/[project]/articles/[ID]-[title].md",
+    "keyMessage": "[記事の核心メッセージ]",
+    "targetAudience": "[ターゲット読者]",
+    "toneAndManner": "[トーン＆マナー]",
+    "hashtags": ["#tag1", "#tag2"]
+  },
+  "nextAction": {
+    "requiredSubagent": "canva-thumbnail-generator",
+    "subagent_type": "ai-spec-note:canva-thumbnail-generator",
+    "description": "サムネイル生成",
+    "prompt": "以下の記事のサムネイルを生成してください。\n\n【記事情報】\n- ID: [記事ID]\n- タイトル: [記事タイトル]\n- キーメッセージ: [核心メッセージ]\n- ターゲット読者: [読者層]\n- トーン＆マナー: [トーン]\n- ハッシュタグ: [タグリスト]\n\n記事ファイルパス: specs/contents/[project]/articles/[ID]-[title].md",
+    "parameters": {
+      "articleId": "[記事ID]",
+      "projectPath": "specs/contents/[project]"
+    }
+  },
+  "completedChecks": [
+    "記事執筆完了",
+    "AEO最適化確認",
+    "GEO最適化確認",
+    "プラットフォーム最適化確認"
+  ]
+}
+```
+
+**サムネイル生成が不要な場合の構造化レスポンス**:
+```json
+{
+  "status": "completed",
+  "article": {
+    "id": "[記事ID]",
+    "title": "[記事タイトル]",
+    "filePath": "specs/contents/[project]/articles/[ID]-[title].md"
+  },
+  "completedChecks": [
+    "記事執筆完了",
+    "AEO最適化確認",
+    "GEO最適化確認",
+    "プラットフォーム最適化確認",
+    "サムネイル生成: 不要（内部ドキュメント）"
+  ]
+}
 ```
 
 ## 実行管理の重要原則
@@ -135,6 +201,8 @@ tools: Read, Write, Edit, MultiEdit, Grep, LS, TodoWrite
 - [ ] 最終品質基準の達成確認
 
 ### 完了段階
+- [ ] サムネイル生成の必要性判定
+- [ ] 構造化レスポンスの生成（該当する場合）
 - [ ] スケジュール更新・完了記録
 - [ ] 次タスクへの引き継ぎ情報整理
 - [ ] 改善点・学びの記録

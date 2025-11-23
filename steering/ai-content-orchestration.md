@@ -93,14 +93,18 @@ graph TD
 **基本サイクル**: `制作 → レビュー → 公開` のサイクルを管理します。
 各記事ごとにこのサイクルを繰り返し、品質を保証します。
 
-**状態駆動フロー**（2フェーズ実行パターン）:
+**状態駆動フロー**（2フェーズ実行パターン + サムネイル生成）:
 ```
 content-executor Phase 1
   ↓ 構造化レスポンス
 status判定:
-  ├─ "completed" → 公開準備
-  ├─ "aeo_optimization_pending" → aeo-optimizer → content-executor Phase 2 → 公開準備
-  └─ "geo_optimization_pending" → geo-optimizer → content-executor Phase 2 → 公開準備
+  ├─ "completed" → サムネイル判定 → content-reviewer
+  ├─ "aeo_optimization_pending" → aeo-optimizer → content-executor Phase 2 → サムネイル判定
+  └─ "geo_optimization_pending" → geo-optimizer → content-executor Phase 2 → サムネイル判定
+
+サムネイル判定:
+  ├─ "thumbnail_generation_pending" → canva-thumbnail-generator → content-reviewer
+  └─ "completed" → content-reviewer（サムネイル生成スキップ）
 ```
 
 **オーケストレーション原則**:
@@ -123,10 +127,15 @@ content-executor呼び出し
 構造化レスポンス受信
   ↓
 status判定:
-  ├─ "completed" → 次のコンテンツへ
+  ├─ "completed" → サムネイル判定へ
   ├─ "aeo_optimization_pending" → aeo-optimizer呼び出し → content-executor Phase 2呼び出し
   ├─ "geo_optimization_pending" → geo-optimizer呼び出し → content-executor Phase 2呼び出し
+  ├─ "thumbnail_generation_pending" → canva-thumbnail-generator呼び出し → content-reviewerへ
   └─ "escalation_needed" → ユーザーエスカレーション
+
+サムネイル判定（content-executor Phase 2完了後）:
+  ├─ noteプラットフォーム向け → canva-thumbnail-generator呼び出し
+  └─ 内部ドキュメント等 → サムネイル生成スキップ → content-reviewerへ
 ```
 
 #### Phase 1完了時（aeo_optimization_pending）の処理フロー
@@ -183,6 +192,58 @@ status判定:
      "checklistCompleted": ["全項目"]
    }
    ```
+
+5. **サムネイル生成フェーズへ**（Phase 2完了後の追加ステップ）
+
+#### Phase 2完了時（thumbnail_generation_pending）の処理フロー
+
+1. **content-executor Phase 2のレスポンス受信**
+   ```json
+   {
+     "status": "thumbnail_generation_pending",
+     "article": {
+       "id": "C001-01",
+       "title": "副業で月10万円を達成した方法",
+       "filePath": "content/articles/C001-01-article.md",
+       "keyMessage": "3つの継続メソッドで月10万円達成",
+       "targetAudience": "副業初心者",
+       "toneAndManner": "実践的・共感型",
+       "hashtags": ["#副業", "#プログラミング", "#月10万円"]
+     },
+     "nextAction": {
+       "requiredSubagent": "canva-thumbnail-generator",
+       "subagent_type": "ai-spec-note:canva-thumbnail-generator",
+       "description": "サムネイル生成",
+       "prompt": "以下の記事のサムネイルを生成してください。\n\n【記事情報】\n- ID: C001-01\n- タイトル: 副業で月10万円を達成した方法\n- キーメッセージ: 3つの継続メソッドで月10万円達成\n- ターゲット読者: 副業初心者\n- トーン＆マナー: 実践的・共感型\n- ハッシュタグ: #副業 #プログラミング #月10万円\n\n記事ファイルパス: content/articles/C001-01-article.md"
+     }
+   }
+   ```
+
+2. **Orchestratorの自動アクション**
+   - `nextAction.subagent_type`と`nextAction.prompt`を使用してTaskツールでcanva-thumbnail-generatorを呼び出し
+   - canva-thumbnail-generatorの構造化レスポンスを受信
+   ```json
+   {
+     "status": "generated",
+     "thumbnailPath": "content/assets/thumbnails/C001-01-thumbnail.png",
+     "designConcept": {
+       "mainMessage": "月10万円達成",
+       "visualStyle": "実績提示型",
+       "colorScheme": "ダークグレー+オレンジ"
+     },
+     "canvaDesignUrl": "https://www.canva.com/design/..."
+   }
+   ```
+
+3. **content-reviewerへ進む**
+   - サムネイル生成完了後、content-reviewerを呼び出し
+   - サムネイル品質も含めて総合レビュー
+
+4. **エラー時の処理**
+   - status: "error" または "escalation_needed" の場合
+   - ユーザーに警告（サムネイル生成失敗）
+   - **記事公開はブロックしない**（手動でのサムネイル作成を推奨）
+   - content-reviewerへ進む（サムネイルなしで）
 
 5. **次のコンテンツへ進む**
 
